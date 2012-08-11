@@ -22,6 +22,8 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'slim'
+gem 'simple_form'
 
 group :development do
   gem 'guard'
@@ -35,6 +37,7 @@ end
 
 group :development, :test do
   gem 'rspec'
+  gem 'rspec-rails'
   gem 'pry'
   gem 'pry-debugger'
   gem 'guard'
