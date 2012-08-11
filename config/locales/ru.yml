@@ -1,0 +1,25 @@
+ru:
+  helpers:
+    actions: 'Действия' 
+    links:
+      edit: 'Редактировать'
+      destroy: 'Удалить'
+      confirm: 'Вы уверены?'
+      new: 'Новая запись'
+      cancel: 'Отменить'
+      back: 'Назад'
+    titles:
+      edit: 'Редактировать %{model}' 
+      new: 'Новый %{model}'
+  products:
+    index:
+      title: 'Продукты'
+  activerecord:
+    models:
+      product: 'Продукт'
+    attributes:
+      product:
+        id: 'Идентификатор'
+        name: 'Наименование'
+        price: 'Цена'
+        created_at: 'Дата создания'

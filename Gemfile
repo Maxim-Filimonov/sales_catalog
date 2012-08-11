@@ -18,10 +18,31 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+  gem 'twitter-bootstrap-rails'
 end
 
 gem 'jquery-rails'
 
+group :development do
+  gem 'guard'
+  gem 'guard-livereload'
+  gem 'guard-rspec'
+  gem 'guard-bundler'
+  gem 'rb-fsevent'
+  gem 'ruby_gntp'
+  gem 'pry-rails'
+end
+
+group :development, :test do
+  gem 'rspec'
+  gem 'pry'
+  gem 'pry-debugger'
+  gem 'guard'
+  gem 'guard-livereload'
+end
+
+# l18n support for russian language
+gem 'russian'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
