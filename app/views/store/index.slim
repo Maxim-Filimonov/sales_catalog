@@ -1,2 +1,6 @@
+h1=t '.title'
 - @products.each do |product|
-  h2 =product.name
+  .entry
+    h3=product.name
+    .price-line
+      h4=number_to_currency(product.price, unit: 'руб')

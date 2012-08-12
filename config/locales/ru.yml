@@ -14,6 +14,9 @@ ru:
   products:
     index:
       title: 'Продукты'
+  store:
+    index:
+      title: 'Каталог продуктов'
   activerecord:
     models:
       product: 'Продукт'
