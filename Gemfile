@@ -33,6 +33,7 @@ group :development do
   gem 'rb-fsevent'
   gem 'ruby_gntp'
   gem 'pry-rails'
+  gem 'heroku'
 end
 
 group :development, :test do
