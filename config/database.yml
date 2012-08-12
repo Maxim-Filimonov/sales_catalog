@@ -12,4 +12,7 @@ test:
 
 production:
   <<: *common
-  database: myapp_production
+  username: mklttapflfqsx 
+  password: qeQSiBqI75DrhwzskkQPhNhWVN
+  database: d13lvhu1s00kud
+
