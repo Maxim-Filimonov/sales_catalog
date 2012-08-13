@@ -2,10 +2,10 @@ require 'spec_helper'
 
 describe StoreController do
   describe "#index" do
-    it "returns all products" do
-      create_list(:product, 10)
+    it "returns all categories" do
+      create_list(:category, 10)
       get 'index'
-      assigns(:products).should have(10).products
+      assigns(:categories).should have(10).categories
     end
   end
 end

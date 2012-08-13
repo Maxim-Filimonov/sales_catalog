@@ -14,15 +14,25 @@ ru:
   products:
     index:
       title: 'Продукты'
+  categories:
+    index:
+      title: 'Категории'
   store:
     index:
       title: 'Каталог продуктов'
   activerecord:
     models:
       product: 'Продукт'
+      category: 
+        one: 'Категорию'
+        few: 'Категории'
+        many: 'Категорий'
     attributes:
       product:
         id: 'Идентификатор'
         name: 'Наименование'
         price: 'Цена'
         created_at: 'Дата создания'
+      category:
+        name: 'Название'
+        description: 'Описание'

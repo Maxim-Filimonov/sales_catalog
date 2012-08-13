@@ -1,0 +1,5 @@
+h1 Продукты в #{@category.name}
+em =@category.description
+- @products.each do |product|
+  h2=product.name
+  h3=number_to_currency(product.price)

@@ -44,6 +44,7 @@ group :development, :test do
   gem 'pry-debugger'
   gem 'guard'
   gem 'guard-livereload'
+  gem 'capybara'
 end
 
 # l18n support for russian language
