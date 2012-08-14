@@ -33,6 +33,7 @@ group :development do
   gem 'rb-fsevent'
   gem 'ruby_gntp'
   gem 'pry-rails'
+  gem 'pry-stack_explorer'
   gem 'heroku'
 end
 
@@ -49,6 +50,7 @@ end
 
 # l18n support for russian language
 gem 'russian'
+gem 'activeadmin', :git => 'https://github.com/gregbell/active_admin'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

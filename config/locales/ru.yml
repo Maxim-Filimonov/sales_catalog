@@ -1,4 +1,8 @@
 ru:
+  products: 
+    one: 'onew'
+    few: 'few'
+    many: 'many'
   helpers:
     actions: 'Действия' 
     links:
@@ -22,10 +26,15 @@ ru:
       title: 'Каталог продуктов'
   activerecord:
     models:
-      product: 'Продукт'
+      product:
+        one: 'Продукт'
+        few: 'few'
+        other: 'Продуктов'
+        many: 'many'
       category: 
         one: 'Категорию'
         few: 'Категории'
+        other: 'Категорий'
         many: 'Категорий'
     attributes:
       product:
