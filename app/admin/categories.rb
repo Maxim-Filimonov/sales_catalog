@@ -1,5 +1,6 @@
+# encoding = utf-8
 ActiveAdmin.register Category do
-  menu label: I18n.t('formtastic.labels.categories')
+  menu label: 'Категории'
   form do |f|
     f.inputs(t '.details') do
       f.input :name

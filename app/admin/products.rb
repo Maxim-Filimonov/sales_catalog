@@ -1,10 +1,11 @@
+# encoding = utf-8
 ActiveAdmin.register Product do
   filter :name
   filter :price
   filter :created_at
   filter :updated_at
   filter :categories_id, :as => :check_boxes, :collection => proc { Category.all}
-  menu label: I18n.t('formtastic.labels.products')
+  menu label: 'Продукты'
   form do |f|
     f.inputs(t '.details') do
       f.input :name
