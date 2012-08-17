@@ -51,6 +51,8 @@ end
 # l18n support for russian language
 gem 'russian'
 gem 'activeadmin', :git => 'https://github.com/gregbell/active_admin'
+# Markdown support
+gem 'redcarpet'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

@@ -8,4 +8,15 @@ ActiveAdmin.register Category do
     end
     f.buttons
   end
+  show do |category|
+    attributes_table do
+      row :name
+      row :description do |category|
+        markdown(category.description)
+      end
+      row :created_at
+      row :updated_at
+    end
+    active_admin_comments
+  end
 end
