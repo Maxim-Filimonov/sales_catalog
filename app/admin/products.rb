@@ -4,14 +4,14 @@ ActiveAdmin.register Product do
   filter :price
   filter :created_at
   filter :updated_at
-  filter :categories_id, :as => :check_boxes, :collection => proc { Category.all}
+  filter :groups_id, :as => :check_boxes, :collection => proc { Group.all}
   menu label: 'Продукты'
   form do |f|
     f.inputs(t '.details') do
       f.input :name
       f.input :price
     end
-    f.inputs :categories
+    f.inputs :groups
     f.buttons
   end
   show do |product|
@@ -22,9 +22,9 @@ ActiveAdmin.register Product do
       end
       row :created_at
       row :updated_at
-      row :categories do |product|
+      row :groups do |product|
         ul do
-          product.categories.each do |cat|
+          product.groups.each do |cat|
             li cat.name 
           end
         end

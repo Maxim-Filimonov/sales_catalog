@@ -1,8 +1,4 @@
 ru:
-  products: 
-    one: 'onew'
-    few: 'few'
-    many: 'many'
   helpers:
     actions: 'Действия' 
     links:
@@ -21,6 +17,9 @@ ru:
   categories:
     index:
       title: 'Категории'
+  groups:
+    index:
+      title: 'Группы'
   store:
     index:
       title: 'Каталог продуктов'
@@ -36,6 +35,11 @@ ru:
         few: 'Категории'
         other: 'Категорий'
         many: 'Категорий'
+      group: 
+        one: 'Группа'
+        few: 'Группы'
+        other: 'Группы'
+        many: 'Групп'
     attributes:
       product:
         id: 'Идентификатор'
@@ -44,4 +48,5 @@ ru:
         created_at: 'Дата создания'
       category:
         name: 'Название'
-        description: 'Описание'
+      group:
+        name: 'Название'

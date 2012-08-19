@@ -3,6 +3,10 @@ ru:
     created_at: 'Дата создания'
     categories: "Категории"
     updated_at: 'Дата изменения'
+    category: 'Категория'
+    category_id: 'Категория'
+    description: 'Описание'
+    groups: 'Группы'
   formtastic:
     labels:
       categories: "Категории"
