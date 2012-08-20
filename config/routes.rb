@@ -5,6 +5,7 @@ SalesCatalog::Application.routes.draw do
 
   resources :products
   resources :categories
+  resources :groups
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

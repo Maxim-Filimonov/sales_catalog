@@ -1,0 +1,4 @@
+h1 Продукты в группе #{@group.name}
+- @products.each do |product|
+  h2=product.name
+  h3=number_to_currency(product.price)

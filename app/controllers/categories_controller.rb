@@ -1,7 +1,7 @@
 class CategoriesController < ApplicationController
   def show
     @category = Category.find params[:id]
-    @products = @category.products
+    @groups = @category.groups
   end
 
   # GET /categories
