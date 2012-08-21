@@ -46,6 +46,8 @@ group :development, :test do
   gem 'guard'
   gem 'guard-livereload'
   gem 'capybara'
+  gem 'capybara_rails'
+  gem 'site_prism'
 end
 
 # l18n support for russian language

@@ -3,6 +3,5 @@
 FactoryGirl.define do
   factory :group do
     category nil
-    products "MyString"
   end
 end
