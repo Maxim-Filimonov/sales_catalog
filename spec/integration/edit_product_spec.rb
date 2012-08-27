@@ -1,5 +1,5 @@
 # encoding = utf-8
-require 'spec_helper'
+require 'integration/spec_helper'
 feature "Editing product" do
   background do
     visit admin_root_path
@@ -12,7 +12,6 @@ feature "Editing product" do
     end
   end
   scenario "Assign product to group" do
-    binding.pry
     group1 = create(:group, name: 'cat1')
     create(:group, name: 'cat2')
     product = create(:product)
