@@ -47,6 +47,8 @@ group :development, :test do
   gem 'guard-livereload'
   gem 'capybara'
   gem 'capybara_rails'
+end
+group :test do
   gem 'site_prism'
 end
 
