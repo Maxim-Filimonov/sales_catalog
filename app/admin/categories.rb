@@ -19,4 +19,10 @@ ActiveAdmin.register Category do
     end
     active_admin_comments
   end
+  index do 
+    column :name
+    column :created_at
+    column :updated_at
+    default_actions
+  end
 end
