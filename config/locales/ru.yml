@@ -27,9 +27,9 @@ ru:
     models:
       product:
         one: 'Продукт'
-        few: 'few'
+        few: 'Продукта'
         other: 'Продуктов'
-        many: 'many'
+        many: 'Продуктов'
       category: 
         one: 'Категорию'
         few: 'Категории'
@@ -40,13 +40,21 @@ ru:
         few: 'Группы'
         other: 'Группы'
         many: 'Групп'
+      brands: 
+        one: 'Бренд'
+        few: 'Бренда'
+        other: 'Брендов'
+        many: 'Брендов'
     attributes:
       product:
         id: 'Идентификатор'
         name: 'Наименование'
         price: 'Цена'
         created_at: 'Дата создания'
+        brand: 'Бренд'
       category:
         name: 'Название'
       group:
+        name: 'Название'
+      brand:
         name: 'Название'

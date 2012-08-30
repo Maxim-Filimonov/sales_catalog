@@ -13,8 +13,8 @@ ru:
       categories_id: "Категории"
       products: "Продукты"
     create: "Создать %{model}"
-    submit: ''
-    update: 'Сохранить %{model}'
+    submit: ""
+    update: "Сохранить %{model}"
     reset: "Reset form"
     cancel: "Cancel and go back"
   active_admin:
