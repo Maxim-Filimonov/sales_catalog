@@ -8,6 +8,8 @@ SalesCatalog::Application.configure do
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
+  # Heroku compatibility
+  config.assets.precompile += ['active_admin.js', 'active_admin.css']
   # Disable Rails's static asset server (Apache or nginx will already do this)
   config.serve_static_assets = false
 
