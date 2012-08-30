@@ -1,6 +1,7 @@
 common: &common
   adapter: postgresql
-  username: sales_catalog
+  username: postgres
+  password: newPassword
 
 development:
   <<: *common
