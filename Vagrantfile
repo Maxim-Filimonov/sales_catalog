@@ -7,13 +7,15 @@ Vagrant::Config.run do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "lucid32"
-  config.vm.box_url = "http://files.vagrantup.com/lucid32.box"
-  config.vm.forward_port 3000,3003
+  config.vm.box = "heroku"
+  config.vm.box_url = "http://dl.dropbox.com/u/1906634/heroku.box"
+  config.vm.forward_port 3000, 3003
+  config.vm.forward_port 5432, 5432
+  config.vm.share_folder("templates", "/tmp/vagrant-puppet/templates", "puppet/templates")
   config.vm.provision :puppet do |puppet|
     puppet.manifests_path = "puppet/manifests"
-    puppet.module_path = "puppet/modules"
     puppet.manifest_file = "development.pp"
+    puppet.options = ["--templatedir","/tmp/vagrant-puppet/templates", "--no-report"]
   end
   config.ssh.max_tries = 150
   config.vm.customize ["modifyvm", :id, "--rtcuseutc", "on"]

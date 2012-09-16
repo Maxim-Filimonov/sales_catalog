@@ -1,43 +1,28 @@
 # development.pp
-stage { 'req-install': before => Stage['rvm-install'] }
-
-class requirements {
-  group { 'puppet': ensure => 'present', }
-
-  exec { "apt-update":
-    command => "/usr/bin/apt-get -y update"
-  }
-
-  exec { 'update-locale-utf8':
-    command => '/usr/sbin/update-locale LANG=en_AU.UTF-8', 
-    unless => '/bin/echo $LANG | /bin/grep UTF-8'
-  } 
-
-  package {
-    ["postgresql","libpq-dev"]:
-      ensure => installed, require => [ Exec['apt-update'],Exec['update-locale-utf8'] ]
-  }
-}
-
-class installrvm {
-  include rvm
-  rvm::system_user { vagrant: ; }
-  rvm_system_ruby {
-    'ruby-1.9.3-p194':
-      ensure => 'present',
-      default_use => true;
-  }
-}
-
-class devtools {
-  package {
-    ["vim","tmux"]: ensure => installed
-  }
-}
 class doinstall {
-  class { requirements:, stage => 'req-install' }
-  include installrvm
-  include devtools
+  include pgsql_config
 }
+class pgsql_config {
+  file { "postgresql-server-config":
+    name    => "/var/pgsql/data/postgresql.conf",
+    ensure  => present,
+    content => template('postgresql.conf.erb'),
+    owner   => 'postgres',
+    mode    => '0644',
+  }
+  file { "postgresql-hba-config":
+    name    => "/var/pgsql/data/pg_hba.conf",
+    ensure  => present,
+    content => template('pg_hba.conf.erb'),
+    owner   => 'postgres',
+    mode    => '0644',
+  }
+  exec { "postgres_restart":
+    command => "/usr/bin/pg_ctl restart -D /var/pgsql/data",
+    user => 'postgres',
+    refreshonly => true,
+    subscribe => File["postgresql-hba-config", "postgresql-server-config"],
+  }
 
+}
 include doinstall
