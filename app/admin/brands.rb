@@ -2,7 +2,7 @@
 ActiveAdmin.register Brand do
   menu label: 'Бренды'
   form do |f|
-    f.inputs(t '.details') do
+    f.inputs(t 'active_admin.resource.edit.details') do
       f.input :name
     end
     f.buttons

@@ -8,7 +8,7 @@ ActiveAdmin.register Product do
   filter :brand
   menu label: 'Продукты'
   form do |f|
-    f.inputs(t '.details') do
+    f.inputs(t 'active_admin.resource.edit.details') do
       f.input :name
       f.input :price
     end
@@ -28,18 +28,18 @@ ActiveAdmin.register Product do
   show do |product|
     attributes_table do
       row :name
-      row :price do |product|
-        number_to_currency(product.price)
+      row :price do |p|
+        number_to_currency(p.price)
       end
       row :brand
       row :created_at
       row :updated_at
-      row :description do |product|
-        markdown(product.description)
+      row :description do |p|
+        markdown(p.description)
       end
-      row :groups do |product|
+      row :groups do |p|
         ul do
-          product.groups.each do |cat|
+          p.groups.each do |cat|
             li cat.name 
           end
         end

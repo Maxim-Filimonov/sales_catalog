@@ -2,7 +2,7 @@
 ActiveAdmin.register Category do
   menu label: 'Категории'
   form do |f|
-    f.inputs(t '.details') do
+    f.inputs(t 'active_admin.resource.edit.details') do
       f.input :name
       f.input :description
     end
@@ -11,8 +11,8 @@ ActiveAdmin.register Category do
   show do |category|
     attributes_table do
       row :name
-      row :description do |category|
-        markdown(category.description)
+      row :description do |cat|
+        markdown(cat.description)
       end
       row :created_at
       row :updated_at
