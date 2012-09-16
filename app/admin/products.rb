@@ -14,6 +14,7 @@ ActiveAdmin.register Product do
     end
     f.inputs :groups
     f.inputs :brand
+    f.inputs :description
     f.buttons
   end
   index do 
@@ -33,6 +34,9 @@ ActiveAdmin.register Product do
       row :brand
       row :created_at
       row :updated_at
+      row :description do |product|
+        markdown(product.description)
+      end
       row :groups do |product|
         ul do
           product.groups.each do |cat|
