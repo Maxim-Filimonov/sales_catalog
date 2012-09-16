@@ -3,3 +3,5 @@ h1 Группы в категории #{@category.name}
   =markdown(@category.description)
 - @groups.each do |group|
   = link_to group.name, group
+  .description=markdown(group.description)
+
