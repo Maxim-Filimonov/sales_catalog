@@ -1,0 +1,8 @@
+=semantic_form_for @product do |f|
+  =f.inputs(t 'active_admin.resource.edit.details') do
+    =f.input :name
+    =f.input :price
+  =f.inputs :groups
+  =f.inputs :brand
+  =markdown_description(f)
+  =f.actions

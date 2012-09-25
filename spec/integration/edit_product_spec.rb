@@ -13,7 +13,6 @@ feature "Editing product" do
   end
   scenario "Assign product to group" do
     group1 = create(:group, name: 'cat1')
-    create(:group, name: 'cat2')
     product = create(:product)
     visit edit_admin_product_path(product)
     within "#edit_product" do
@@ -21,5 +20,17 @@ feature "Editing product" do
       click_button "Update"
     end
     page.should have_selector("tr li:contains(#{group1.name})")
+  end
+
+  scenario "Assign product to brand" do
+    brand = create(:group, name: 'brand1')
+    product = create(:product)
+    visit edit_admin_product_path(product)
+    within "#edit_product" do
+      select(brand.name, from: 'product[group_ids][]')
+      click_button "Update"
+    end
+    page.should have_selector("tr li:contains(#{group1.name})")
+  end
   end
 end

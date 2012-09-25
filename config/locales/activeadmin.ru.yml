@@ -49,7 +49,7 @@ ru:
     logout: "Выйти"
     resource:
       edit:
-        details: "Описание"
+        details: "Детали"
     sidebars:
       filters: "Фильтры"
     pagination:
