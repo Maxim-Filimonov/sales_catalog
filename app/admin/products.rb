@@ -7,17 +7,8 @@ ActiveAdmin.register Product do
   filter :groups_id, :as => :check_boxes, :collection => proc { Group.all}
   filter :brand
   menu label: 'Продукты'
-  form do |f|
-    f.inputs(t 'active_admin.resource.edit.details') do
-      f.input :name
-      f.input :price
-    end
-    f.inputs :groups
-    f.inputs :brand
-    f.inputs :description
-    f.buttons
-  end
-  index do 
+  form :partial => 'form'
+  index do
     column :name
     column :price
     column :brand

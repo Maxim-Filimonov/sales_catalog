@@ -4,8 +4,8 @@ ActiveAdmin.register Category do
   form do |f|
     f.inputs(t 'active_admin.resource.edit.details') do
       f.input :name
-      f.input :description
     end
+    markdown_description(f)
     f.buttons
   end
   show do |category|

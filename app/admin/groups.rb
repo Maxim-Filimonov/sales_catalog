@@ -5,8 +5,8 @@ ActiveAdmin.register Group do
     f.inputs(t 'active_admin.resource.edit.details') do
       f.input :name
       f.input :category
-      f.input :description
     end
+    markdown_description(f)
     f.buttons
   end
   show do |product|
