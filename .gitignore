@@ -16,3 +16,5 @@
 # Vagrant
 .vagrant
 cache
+# Rubymine
+.idea/
