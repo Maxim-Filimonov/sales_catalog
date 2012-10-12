@@ -18,3 +18,5 @@
 cache
 # Rubymine
 .idea/
+# Vim
+tags
