@@ -3,7 +3,6 @@ ActiveAdmin.register Oil do
   filter :name
   filter :created_at
   filter :updated_at
-  filter :groups_id, :as => :check_boxes, :collection => proc { Group.all}
   filter :brand
   menu label: 'Масла'
   form :partial => 'form'
