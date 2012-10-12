@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @oil.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @oil.description %>
+</p>
+
+<p>
+  <b>Brand:</b>
+  <%= @oil.brand %>
+</p>
+
+<p>
+  <b>Groups:</b>
+  <%= @oil.groups %>
+</p>
+
+
+<%= link_to 'Edit', edit_oil_path(@oil) %> |
+<%= link_to 'Back', oils_path %>

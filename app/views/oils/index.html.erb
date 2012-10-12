@@ -1,0 +1,29 @@
+<h1>Listing oils</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Brand</th>
+    <th>Groups</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @oils.each do |oil| %>
+  <tr>
+    <td><%= oil.name %></td>
+    <td><%= oil.description %></td>
+    <td><%= oil.brand %></td>
+    <td><%= oil.groups %></td>
+    <td><%= link_to 'Show', oil %></td>
+    <td><%= link_to 'Edit', edit_oil_path(oil) %></td>
+    <td><%= link_to 'Destroy', oil, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Oil', new_oil_path %>
