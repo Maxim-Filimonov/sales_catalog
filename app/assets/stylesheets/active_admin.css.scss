@@ -27,3 +27,13 @@
 // .active_admin       applies to any Active Admin namespace
 // .admin_namespace    applies to the admin namespace (eg: /admin)
 // .other_namespace    applies to a custom namespace named other (eg: /other)
+.active_admin {
+  .formtastic {
+    .links {
+      margin: 0.5em 0 0 20%;
+    }
+    .add-link {
+      margin-left: 10px
+    }
+  }
+}

@@ -11,7 +11,7 @@ ru:
     labels:
       categories: "Категории"
       categories_id: "Категории"
-      products: "Продукты"
+      oils: "Масла"
     create: "Создать %{model}"
     submit: ""
     update: "Сохранить %{model}"
@@ -99,3 +99,7 @@ ru:
       links:
         sign_in: "Войти"
         forgot_your_password: "Забыли пароль?"
+    resources:
+      edit:
+        remove: "Удалить"
+        add: "Добавить"

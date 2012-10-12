@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120916053952) do
+ActiveRecord::Schema.define(:version => 20121009080235) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -69,18 +69,21 @@ ActiveRecord::Schema.define(:version => 20120916053952) do
 
   add_index "groups", ["category_id"], :name => "index_groups_on_category_id"
 
-  create_table "groups_products", :id => false, :force => true do |t|
-    t.integer "group_id"
-    t.integer "product_id"
+  create_table "oil_variations", :force => true do |t|
+    t.decimal  "price"
+    t.float    "volume"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "oil_id"
   end
 
-  create_table "products", :force => true do |t|
+  create_table "oils", :force => true do |t|
     t.string   "name"
-    t.decimal  "price"
+    t.text     "description"
+    t.integer  "brand_id"
+    t.string   "groups"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
-    t.integer  "brand_id"
-    t.text     "description"
   end
 
 end

@@ -25,12 +25,12 @@ ru:
       title: 'Каталог продуктов'
   activerecord:
     models:
-      product:
-        one: 'Продукт'
-        few: 'Продукта'
-        other: 'Продуктов'
-        many: 'Продуктов'
-      category: 
+      oil:
+        one: 'Масло'
+        few: 'Масел'
+        other: 'Масла'
+        many: 'Масел'
+      category:
         one: 'Категорию'
         few: 'Категории'
         other: 'Категорий'
@@ -46,12 +46,15 @@ ru:
         other: 'Брендов'
         many: 'Брендов'
     attributes:
-      product:
+      oil:
         id: 'Идентификатор'
         name: 'Наименование'
-        price: 'Цена'
         created_at: 'Дата создания'
         brand: 'Бренд'
+        oil_variations: 'Вариации'
+      oil_variation:
+        volume: 'Литраж'
+        price: 'Цена'
       category:
         name: 'Название'
       group:

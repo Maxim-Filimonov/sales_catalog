@@ -1,0 +1,11 @@
+=semantic_form_for [:admin, @oil] do |f|
+  =f.inputs(t 'active_admin.resource.edit.details') do
+    =f.input :name
+  =f.inputs :brand
+  =markdown_description(f)
+  =f.inputs do
+    =f.semantic_fields_for :oil_variations do |variation|
+      = render 'oil_variation_fields', :f => variation
+    .add-link
+      = link_to_add_association (t 'active_admin.resources.edit.add'), f, :oil_variations
+  =f.actions
