@@ -4,7 +4,5 @@ FactoryGirl.define do
   factory :oil do
     name "MyString"
     description "MyText"
-    brand "MyString"
-    groups "MyString"
   end
 end

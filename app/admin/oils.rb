@@ -22,6 +22,15 @@ ActiveAdmin.register Oil do
       row :description do |p|
         markdown(p.description)
       end
+      row :categories do |oil|
+        ul do
+          oil.categories.each do |category|
+            li do
+              category.name
+            end
+          end
+        end
+      end
       row :oil_variations do |oil|
         ul do
           oil.oil_variations.each do |variation|
